@@ -205,9 +205,9 @@ RegisterNetEvent('qb-houses:server:viewHouse', function(house)
     local pData = QBCore.Functions.GetPlayer(src)
 
     local houseprice = Config.Houses[house].price
-    local brokerfee = (houseprice / 100 * 5)
-    local bankfee = (houseprice / 100 * 10)
-    local taxes = (houseprice / 100 * 6)
+    local brokerfee = 0
+    local bankfee = 0
+    local taxes = 0
 
     TriggerClientEvent('qb-houses:client:viewHouse', src, houseprice, brokerfee, bankfee, taxes,
         pData.PlayerData.charinfo.firstname, pData.PlayerData.charinfo.lastname)
